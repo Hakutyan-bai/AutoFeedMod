@@ -1,0 +1,22 @@
+{
+	"schemaVersion": 1,
+	"id": "autofeed",
+	"version": "1.0.10",
+	"name": "Auto Feed Mod",
+	"description": "Press H to toggle automatic feeding of nearby animals",
+	"authors": ["Haku"],
+	"contact": {
+		"homepage": "https://mod.sakura.ink",
+		"sources": "https://github.com/NiceMiku/Haku/autofeed-mod"
+	},
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["ink.sakura.autofeed.AutoFeeder"]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"fabric-api": "*",
+		"minecraft": "1.21.6"
+	}
+}

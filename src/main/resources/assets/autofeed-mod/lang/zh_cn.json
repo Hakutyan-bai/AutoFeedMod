@@ -1,0 +1,6 @@
+{
+  "message.autofeed.enabled": "自动喂养已开启",
+  "message.autofeed.disabled": "自动喂养已关闭",
+  "message.replant.enabled": "自动补种已开启",
+  "message.replant.disabled": "自动补种已关闭"
+}

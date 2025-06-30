@@ -1,0 +1,6 @@
+{
+  "message.autofeed.enabled": "自動給餌が有効になりました",
+  "message.autofeed.disabled": "自動給餌が無効になりました",
+  "message.replant.enabled": "自動再植え付けが有効になりました",
+  "message.replant.disabled": "自動再植え付けが無効になりました"
+}

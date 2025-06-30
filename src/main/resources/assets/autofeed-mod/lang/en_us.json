@@ -1,0 +1,6 @@
+{
+  "message.autofeed.enabled": "Auto-feeding enabled",
+  "message.autofeed.disabled": "Auto-feeding disabled",
+  "message.replant.enabled": "Auto-replant enabled",
+  "message.replant.disabled": "Auto-replant disabled"
+}
