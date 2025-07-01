@@ -22,10 +22,10 @@ public class AutoFeederConfigScreen extends Screen {
 
         // 移除TextWidget，标题将在render方法中绘制
 
-        intervalSlider = new SliderWidget(centerX - 100, y, 200, 20, Text.literal("自动喂食频率: " + feeder.getFeedIntervalTicks() + " tick"), (feeder.getFeedIntervalTicks() - 1) / 19.0) {
+        intervalSlider = new SliderWidget(centerX - 100, y, 200, 20, Text.literal("自动喂食的频率: " + feeder.getFeedIntervalTicks() + " tick"), (feeder.getFeedIntervalTicks() - 1) / 19.0) {
             @Override
             protected void updateMessage() {
-                setMessage(Text.literal("自动喂食频率: " + (int)(1 + this.value * 19) + " tick"));
+                setMessage(Text.literal("自动喂食的频率: " + (int)(1 + this.value * 19) + " tick"));
             }
             @Override
             protected void applyValue() {
@@ -35,10 +35,10 @@ public class AutoFeederConfigScreen extends Screen {
         this.addDrawableChild(intervalSlider);
 
         y += 30;
-        rangeSlider = new SliderWidget(centerX - 100, y, 200, 20, Text.literal("自动喂食范围: " + feeder.getFeedRange()), (feeder.getFeedRange() - 1) / 19.0) {
+        rangeSlider = new SliderWidget(centerX - 100, y, 200, 20, Text.literal("自动喂食的范围: " + feeder.getFeedRange()), (feeder.getFeedRange() - 1) / 19.0) {
             @Override
             protected void updateMessage() {
-                setMessage(Text.literal("自动喂食范围: " + (int)(1 + this.value * 19)));
+                setMessage(Text.literal("自动喂食的范围: " + (int)(1 + this.value * 19)));
             }
             @Override
             protected void applyValue() {
