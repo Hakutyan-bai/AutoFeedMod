@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "autofeed",
-	"version": "1.0.10",
+	"version": "1.0.11",
 	"name": "Auto Feed Mod",
 	"description": "Press H to toggle automatic feeding of nearby animals",
 	"authors": ["Haku"],

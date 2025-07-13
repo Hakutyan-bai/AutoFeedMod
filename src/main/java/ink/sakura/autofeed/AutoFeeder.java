@@ -9,6 +9,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.CowEntity;
 import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.entity.passive.SheepEntity;
@@ -96,7 +97,7 @@ public class AutoFeeder implements ClientModInitializer {
         //Box box = new Box(pos.add(-5, -5, -5), pos.add(5, 5, 5));
         Box box = new Box(pos.add(-feedRange, -feedRange, -feedRange), pos.add(feedRange, feedRange, feedRange));
         for (Entity entity : mc.world.getOtherEntities(mc.player, box)) {
-            if (entity instanceof CowEntity || entity instanceof SheepEntity || entity instanceof PigEntity) {
+            if (entity instanceof CowEntity || entity instanceof SheepEntity || entity instanceof PigEntity || entity instanceof ChickenEntity) {
                 AnimalEntity animal = (AnimalEntity) entity;
                 if (animal.isBaby() || animal.getLoveTicks() > 0) continue;
                 Item food = getFoodForAnimal(animal);
@@ -116,6 +117,7 @@ public class AutoFeeder implements ClientModInitializer {
     private Item getFoodForAnimal(AnimalEntity animal) {
         if (animal instanceof CowEntity || animal instanceof SheepEntity) return Items.WHEAT;
         if (animal instanceof PigEntity) return Items.CARROT;
+        if (animal instanceof ChickenEntity) return Items.WHEAT_SEEDS;
         return null;
     }
 
@@ -210,4 +212,3 @@ public class AutoFeeder implements ClientModInitializer {
     public int getFeedRange() { return feedRange; }
     public void setFeedRange(int range) { this.feedRange = range; }
 }
-
